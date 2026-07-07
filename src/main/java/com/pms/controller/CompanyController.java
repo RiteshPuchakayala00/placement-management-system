@@ -39,7 +39,7 @@ public class CompanyController {
 
     @PostMapping("/opportunities")
     @PreAuthorize("hasAuthority('ROLE_COMPANY')")
-    public ResponseEntity<OpportunityResponseDto> postOppurtunity(
+    public ResponseEntity<OpportunityResponseDto> postOpportunity(
             @Valid @RequestBody OpportunityRequestDto request){
         return ResponseEntity.ok(companyService.postOpportunity(request)) ;
     }
